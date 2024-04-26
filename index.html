@@ -6,16 +6,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Trivia Game</title>
   <link rel="stylesheet" href="style.css">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Trivia Game</title>
+  <style>
+    /* CSS for the instructions box */
+    #instructions {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      display: none;
+      z-index: 999;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- Instructions box -->
+    <div id="instructions">
+      <h2> MUSIC LOVERS! WELCOME TO MY TRIVIA GAME.</h2>
+      <p>You will be asked a series of questions about music of the 20th century. You will be given 4 options to choose from . If you choose correctly you will have the opportunity to play a video related to your correct answer. Sit back and relax. </p>
+      <p>The game will begin shortly...</p>
+    </div>
+  
+    <!-- Your game content goes here -->
+  
+    <script>
+      // Function to show instructions and fade out after 15 seconds
+      function showInstructions() {
+        var instructions = document.getElementById('instructions');
+        instructions.style.display = 'block';
+        setTimeout(function() {
+          instructions.style.opacity = '0';
+          setTimeout(function() {
+            instructions.style.display = 'none';
+          }, 1000); // Fade out duration
+        }, 15000); // 15 seconds
+      }
+  
+      // Call the function to show instructions when the page loads
+      window.onload = function() {
+        showInstructions();
+        // Start your game logic here
+      };
+    </script>
+  </body>
+  </html>
+  
+
+
+
+
+
+
+
 </head>
 
-<body>
+
   
   <!-- <div id="curtain"> -->
   <div class="curtain-left"></div>
   <div class="curtain-right"></div>
 
 
-  <section id=qa-block>
+  <section id="qa-block">
     <div id="question-container">
       <h2 id="question"></h2>
       <ul id="options"></ul>

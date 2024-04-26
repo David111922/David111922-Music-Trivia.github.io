@@ -352,7 +352,17 @@ function displayQuestion() {
 //     alert('Game Over! Your final score is ' + score);
 //   }
 // }
-// !this section add 1 point to score
+//! added curtain closing after final question and game over from swalfire
+function closeCurtain() {
+  const curtainLeft = document.querySelector(".curtain-left");
+  const curtainRight = document.querySelector(".curtain-right");
+
+  setTimeout(() => {
+    curtainLeft.style.animation = "close-curtain 12s forwards";
+    curtainRight.style.animation = "close-curtain 12s forwards";
+  }, 5000);
+}
+
 function checkAnswer(selectedOption) {
   const currentQuestion = questions[currentQuestionIndex];
   if (selectedOption === currentQuestion.answer) {
@@ -361,8 +371,8 @@ function checkAnswer(selectedOption) {
     Swal.fire({
       title: "Nice job!",
       html:
-        '<a href="' +
-        currentQuestion.audioSrc +
+     '<a href="' +
+     currentQuestion.audioSrc +
         '" target="_blank">Click here to play the song</a>',
       icon: "success",
       confirmButtonText: "Next Question",
@@ -374,6 +384,7 @@ function checkAnswer(selectedOption) {
           displayQuestion();
         } else {
           Swal.fire("Game Over!", "Your final score is " + score, "info");
+          closeCurtain(); // Call closeCurtains when the game is over
         }
       }
     });
@@ -383,6 +394,7 @@ function checkAnswer(selectedOption) {
       displayQuestion();
     } else {
       Swal.fire("Game Over!", "Your final score is " + score, "info");
+      closeCurtain(); // Call closeCurtains when the game is over
     }
   }
 }

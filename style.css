@@ -100,12 +100,12 @@ body {
 .curtain-left {
   offset-position: -20%;
   /* left: ; */
-  animation: open-curtain 12s forwards;
+  animation: open-curtain 22s forwards;
 }
 
 .curtain-right {
   right: -8%;
-  animation: open-curtain 12s forwards;
+  animation: open-curtain 22s forwards;
 }
 
 @keyframes open-curtain {
@@ -118,25 +118,12 @@ body {
 }
 /* !for future use when game ends curtain will close */
 
-/* @keyframes close-curtain {
-  0% {
-    transform: scaleX(0);
-  }
+@keyframes close-curtain {
   100% {
     transform: scaleX(1);
   }
-  
-} */
-/* 
-.curtain-left {
-  offset-position: -20%;
-  /* left: ; */
-  /* animation: close-curtain 12s forwards;  */
-/* } */
-
-/* .curtain-right {
-  right: -8%;
-  animation: close-curtain 12s forwards; Change the animation name
-} */ 
-
+  0% {
+    transform: scaleX(0);
+  }
+}
 
