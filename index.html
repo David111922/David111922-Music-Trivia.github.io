@@ -16,22 +16,23 @@
     /* CSS for the instructions box */
     #instructions {
       position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
+      top: 0%;
+      left: 70%;
+      /* transform: translate(-50%, -50%); */
+      background-color: black;
       color: #fff;
       padding: 20px;
       border-radius: 10px;
       display: none;
       z-index: 999;
+      font-family:
     }
   </style>
   </head>
   <body>
     <!-- Instructions box -->
     <div id="instructions">
-      <h2> MUSIC LOVERS! WELCOME TO MY TRIVIA GAME.</h2>
+      <h1> MUSIC LOVERS! WELCOME TO MY TRIVIA GAME.</h1>
       <p>You will be asked a series of questions about music of the 20th century. You will be given 4 options to choose from . If you choose correctly you will have the opportunity to play a video related to your correct answer. Sit back and relax. </p>
       <p>The game will begin shortly...</p>
     </div>
@@ -48,7 +49,7 @@
           setTimeout(function() {
             instructions.style.display = 'none';
           }, 1000); // Fade out duration
-        }, 15000); // 15 seconds
+        }, 12000); // 15 seconds
       }
   
       // Call the function to show instructions when the page loads

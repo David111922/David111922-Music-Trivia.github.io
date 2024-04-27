@@ -97,15 +97,16 @@ body {
   background-image: url("https://media.istockphoto.com/id/468616445/photo/red-curtain.jpg?s=2048x2048&w=is&k=20&c=NepAIRgiDe4YYT7JYmATC5daiE863F_N4BLvp3_xqso=");
 }
 
+
 .curtain-left {
   offset-position: -20%;
   /* left: ; */
-  animation: open-curtain 22s forwards;
+  animation: open-curtain 35s forwards;
 }
 
 .curtain-right {
   right: -8%;
-  animation: open-curtain 22s forwards;
+  animation: open-curtain 35s forwards;
 }
 
 @keyframes open-curtain {
