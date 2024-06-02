@@ -10,7 +10,7 @@
 
  This web is deployed at https://david111922.github.io/Music-Trivia-Game/
 
- ## Gme Logic
+ ## Game Logic
 
  The game starts with the opening of a curtain that initiates the beginning of the game. Underneath the neon message "You are what you listen to will be an initial
  question on general knowledge of music. In the preceding vertical block the player will have four answers to choose from. If the user answers incorrectly the game
